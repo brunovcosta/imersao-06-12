@@ -12,16 +12,45 @@ import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+import java.util.ArrayList;
 
+public class MainActivity extends AppCompatActivity {
+    ArrayList<Pergunta> perguntas;
+    int idPerguntaAtual;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        perguntas = new ArrayList<Pergunta>();
+
+        perguntas.add(new Pergunta("Qual é a comida que liga e desliga?", "O Strog-ON-OFF"));
+        perguntas.add(new Pergunta("Qual é o fim da picada?", "Quando o mosquito vai embora"));
+        perguntas.add(new Pergunta("O que são dois pontos pretos no microscópio?", "Uma blacktéria e um pretozoário"));
+        perguntas.add(new Pergunta("O que é um cigarro de maconha feito com papel de jornal?", "Um baseado em fatos reais"));
+        perguntas.add(new Pergunta("Como se faz para ganhar um Chokito?", "É só colocar o dedito na tomadita"));
+        perguntas.add(new Pergunta("Qual o vinho que não tem álcool?", "Ovinho de Codorna"));
+        perguntas.add(new Pergunta("O que é um pontinho vermelho no meio da porta?", "Um olho mágico com conjuntivite"));
+        perguntas.add(new Pergunta("O que o canibal vegetariano come?", "A planta do pé e a batata da perna"));
+        perguntas.add(new Pergunta("Por que as estrelas não fazem miau?", "Por que Astro-no-mia"));
+        perguntas.add(new Pergunta("O que é que a banana suicida falou?", "Macacos me mordam"));
+        perguntas.add(new Pergunta("Qual é o doce preferido do átomo?", "Pé-de-moléculas"));
+        perguntas.add(new Pergunta("O que é uma molécula?", "É uma meninola muito sapécula"));
+        perguntas.add(new Pergunta("Como o elétron atende ao telefone?", "Próton"));
+        perguntas.add(new Pergunta("O que um cromossomo disse para o outro?", "Oh! Cromossomos felizes"));
+        perguntas.add(new Pergunta("Como as enzimas se reproduzem?", "Fica uma enzima da outra"));
+        perguntas.add(new Pergunta("Qual é a parte do corpo que cheira bacalhau?", "O nariz"));
+        perguntas.add(new Pergunta("O que é um ponto marrom no pulmão?", "Uma brownquite"));
+        perguntas.add(new Pergunta("Por que a vaca foi para o espaço?", "Para se encontrar com o vácuo"));
+        perguntas.add(new Pergunta("O que o polvo disse para a lula?", "Ah, eu tô molusco"));
+        perguntas.add(new Pergunta("O que o espermatozóide falou para o óvulo?", "Deixa eu morar com você porque a minha casa é um saco"));
+        idPerguntaAtual=-1;
+        updatePergunta();
 
     }
 
@@ -50,16 +79,22 @@ public class MainActivity extends AppCompatActivity {
        TextView resultado = (TextView)findViewById(R.id.resultado);
         resultado.setText(texto);
     }
-    public void verificarResposta(View view){
-        Log.i("teste","fui clicado!");
-        TextView resposta = (TextView)findViewById(R.id.resposta);
-        String textoResposta = resposta.getText().toString();
-        Log.i("teste",textoResposta);
+    void updatePergunta(){
+        idPerguntaAtual= (idPerguntaAtual+1)%perguntas.size();
+        TextView pergunta = (TextView)findViewById(R.id.pergunta);
+        pergunta.setText(perguntas.get(idPerguntaAtual).getTexto());
 
-        if(textoResposta.equals("2")){
-            trocarTexto("acertou!");
+    }
+    public void verificarResposta(View view){
+        EditText resposta = (EditText)findViewById(R.id.resposta);
+        String textoResposta = resposta.getText().toString();
+
+        if(perguntas.get(idPerguntaAtual).checkResposta(textoResposta)){
+            updatePergunta();
+            trocarTexto("Acertou!");
+
         }else{
-           trocarTexto("errou!");
+           trocarTexto("Errou! Tente novamente!");
         }
     }
 }
