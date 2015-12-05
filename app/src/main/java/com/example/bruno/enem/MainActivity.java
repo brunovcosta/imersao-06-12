@@ -1,13 +1,18 @@
 package com.example.bruno.enem;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -40,5 +45,21 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+    void trocarTexto(String texto){
+       TextView resultado = (TextView)findViewById(R.id.resultado);
+        resultado.setText(texto);
+    }
+    public void verificarResposta(View view){
+        Log.i("teste","fui clicado!");
+        TextView resposta = (TextView)findViewById(R.id.resposta);
+        String textoResposta = resposta.getText().toString();
+        Log.i("teste",textoResposta);
+
+        if(textoResposta.equals("2")){
+            trocarTexto("acertou!");
+        }else{
+           trocarTexto("errou!");
+        }
     }
 }
