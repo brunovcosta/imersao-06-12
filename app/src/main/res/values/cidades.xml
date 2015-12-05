@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="perguntas">
+        <item>pergunta 1</item>
+        <item>pergunta 2</item>
+        <item>pergunta 3</item>
+        <item>pergunta 4</item>
+        <item>pergunta 5</item>
+        <item>pergunta 6</item>
+    </array>
+    <array name="respostas">
+        <item>resposta 1</item>
+        <item>resposta 2</item>
+        <item>resposta 3</item>
+        <item>resposta 4</item>
+        <item>resposta 5</item>
+        <item>resposta 6</item>
+    </array>
+</resources>
