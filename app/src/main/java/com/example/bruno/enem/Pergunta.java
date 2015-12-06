@@ -23,6 +23,12 @@ public class Pergunta {
         this.resposta = resposta;
     }
     public boolean checkResposta(String resposta){
-        return this.resposta.toLowerCase().equals(resposta.toLowerCase());
+        String[] palavrasChave = this.resposta.split(" ");
+        for(int t=0;t<palavrasChave.length;t++){
+            if (!resposta.toLowerCase().contains(palavrasChave[t].toLowerCase())){
+                return false;
+            }
+        }
+        return true;
     }
 }

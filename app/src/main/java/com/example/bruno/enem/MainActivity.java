@@ -29,26 +29,26 @@ public class MainActivity extends AppCompatActivity {
 
         perguntas = new ArrayList<Pergunta>();
 
-        perguntas.add(new Pergunta("Qual é a comida que liga e desliga?", "O Strog-ON-OFF"));
-        perguntas.add(new Pergunta("Qual é o fim da picada?", "Quando o mosquito vai embora"));
-        perguntas.add(new Pergunta("O que são dois pontos pretos no microscópio?", "Uma blacktéria e um pretozoário"));
-        perguntas.add(new Pergunta("O que é um cigarro de maconha feito com papel de jornal?", "Um baseado em fatos reais"));
-        perguntas.add(new Pergunta("Como se faz para ganhar um Chokito?", "É só colocar o dedito na tomadita"));
+        perguntas.add(new Pergunta("Qual é a comida que liga e desliga?", "Strog ON OFF"));
+        perguntas.add(new Pergunta("Qual é o fim da picada?", "mosquito vai embora"));
+        perguntas.add(new Pergunta("O que são dois pontos pretos no microscópio?", "blacktéria pretozoário"));
+        perguntas.add(new Pergunta("O que é um cigarro de maconha feito com papel de jornal?", "baseado em fatos reais"));
+        perguntas.add(new Pergunta("Como se faz para ganhar um Chokito?", "dedito tomadita"));
         perguntas.add(new Pergunta("Qual o vinho que não tem álcool?", "Ovinho de Codorna"));
-        perguntas.add(new Pergunta("O que é um pontinho vermelho no meio da porta?", "Um olho mágico com conjuntivite"));
-        perguntas.add(new Pergunta("O que o canibal vegetariano come?", "A planta do pé e a batata da perna"));
-        perguntas.add(new Pergunta("Por que as estrelas não fazem miau?", "Por que Astro-no-mia"));
+        perguntas.add(new Pergunta("O que é um pontinho vermelho no meio da porta?", "olho mágico conjuntivite"));
+        perguntas.add(new Pergunta("O que o canibal vegetariano come?", "planta do pé batata da perna"));
+        perguntas.add(new Pergunta("Por que as estrelas não fazem miau?", "Astro no mia"));
         perguntas.add(new Pergunta("O que é que a banana suicida falou?", "Macacos me mordam"));
-        perguntas.add(new Pergunta("Qual é o doce preferido do átomo?", "Pé-de-moléculas"));
-        perguntas.add(new Pergunta("O que é uma molécula?", "É uma meninola muito sapécula"));
+        perguntas.add(new Pergunta("Qual é o doce preferido do átomo?", "Pé de moléculas"));
+        perguntas.add(new Pergunta("O que é uma molécula?", "meninola sapécula"));
         perguntas.add(new Pergunta("Como o elétron atende ao telefone?", "Próton"));
-        perguntas.add(new Pergunta("O que um cromossomo disse para o outro?", "Oh! Cromossomos felizes"));
-        perguntas.add(new Pergunta("Como as enzimas se reproduzem?", "Fica uma enzima da outra"));
-        perguntas.add(new Pergunta("Qual é a parte do corpo que cheira bacalhau?", "O nariz"));
-        perguntas.add(new Pergunta("O que é um ponto marrom no pulmão?", "Uma brownquite"));
-        perguntas.add(new Pergunta("Por que a vaca foi para o espaço?", "Para se encontrar com o vácuo"));
-        perguntas.add(new Pergunta("O que o polvo disse para a lula?", "Ah, eu tô molusco"));
-        perguntas.add(new Pergunta("O que o espermatozóide falou para o óvulo?", "Deixa eu morar com você porque a minha casa é um saco"));
+        perguntas.add(new Pergunta("O que um cromossomo disse para o outro?", "Cromossomos felizes"));
+        perguntas.add(new Pergunta("Como as enzimas se reproduzem?", "uma enzima da outra"));
+        perguntas.add(new Pergunta("Qual é a parte do corpo que cheira bacalhau?", "nariz"));
+        perguntas.add(new Pergunta("O que é um ponto marrom no pulmão?", "brownquite"));
+        perguntas.add(new Pergunta("Por que a vaca foi para o espaço?", "encontrar vácuo"));
+        perguntas.add(new Pergunta("O que o polvo disse para a lula?", "eu tô molusco"));
+        perguntas.add(new Pergunta("O que o espermatozóide falou para o óvulo?", "morar  você  minha casa é um saco"));
         idPerguntaAtual=-1;
         updatePergunta();
 
