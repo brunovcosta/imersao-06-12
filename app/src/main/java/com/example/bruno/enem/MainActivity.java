@@ -92,9 +92,10 @@ public class MainActivity extends AppCompatActivity {
         if(perguntas.get(idPerguntaAtual).checkResposta(textoResposta)){
             updatePergunta();
             trocarTexto("Acertou!");
+            resposta.setText("");
 
         }else{
-           trocarTexto("Errou! Tente novamente!");
+           trocarTexto("Errou! Errou feio! Errou rude!");
         }
     }
 }
